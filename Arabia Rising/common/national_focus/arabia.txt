@@ -1,0 +1,75 @@
+﻿focus_tree = {
+	id = arabian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SAU
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+
+	focus = {
+		id = Stabalize_Arabia
+		icon = GFX_goal_generic_demand_territory
+		x = 13
+		y = 0
+		
+		
+		bypass = {
+
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.10
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+	}
+
+focus = {
+		id = The_Power_Of_Politics
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		relative_position_id = Stabalize_Arabia
+		
+		bypass = {
+
+		}
+
+		cost = 10
+		prerequisite = { focus = Stabalize_Arabia }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = power_of_politics
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+	}
+
+
+
+}		
